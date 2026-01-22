@@ -2,19 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-// Import media
 import PitbossNotice from '../assets/INFO/PitbossNotice.mp4';
 import DailyKiller from '../assets/INFO/DailyKiller.mp4';
 import StartingArmor from '../assets/INFO/StartingArmor.mp4';
 import KillFeed from '../assets/INFO/KillFeed.mp4';
-// Import other media...
-// Background and character images for FeatureCards
+
 import BGChar2 from '../assets/CharPNG.png';
 import CharPNG1 from '../assets/INFO/CardBG1.png';
 import CharPNG2 from '../assets/INFO/CardBG2.png';
 import CharPNG3 from '../assets/INFO/CardBG3.png';
 
-// Icon images
 import IconBanana from '../assets/INFO/Icons/level-up.png';
 import IconStarting from '../assets/INFO/Icons/Starting.png';
 import IconNotice from '../assets/INFO/Icons/Notice.png';
@@ -27,27 +24,32 @@ import IconLoot from '../assets/INFO/Icons/Loot.png';
 import IconPrem from '../assets/INFO/Icons/Premium.png';
 import IconGlider from '../assets/INFO/Icons/Glider.png';
 
+import Guild1 from '../assets/GUILDS/Guild1.jpg';
+import Guild2 from '../assets/GUILDS/Guild2.jpg';
+import Guild3 from '../assets/GUILDS/Guild3.jpg';
+
+import TestLogo from '../assets/GUILDS/TestLogo.png';
+
 function Home() {
   const [activeTab, setActiveTab] = useState('home-section');
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [isInView, setIsInView] = useState(false); // Track if the info-section is in view
-  const infoSectionRef = useRef(null); // Ref for the info section
+  const [isInView, setIsInView] = useState(false); 
+  const infoSectionRef = useRef(null);
 
   const handleMouseEnter = (itemKey) => setHoveredItem(itemKey);
   const handleMouseLeave = () => setHoveredItem(null);
 
-  // Detect when the info section is in view using Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsInView(true); // Set to true when the info-section is in view
+            setIsInView(true);
           }
         });
       },
       {
-        threshold: 0.5, // Trigger when 50% of the section is in view
+        threshold: 0.5, 
       }
     );
     if (infoSectionRef.current) {
@@ -107,7 +109,7 @@ function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-ITC2 font-extrabold"
+            className="text-4xl sm:text-6xl lg:text-7xl font-ITC2 font-extrabold"
             style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}
           >
             The Future Awaits
@@ -117,7 +119,7 @@ function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            className="text-lg md:text-xl lg:text-2xl font-ITC2 text-slate-200 font-medium mb-5 max-w-2xl"
+            className="text-lg sm:text-xl lg:text-2xl font-ITC2 text-slate-200 font-medium mb-5 max-w-2xl"
             style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}
           >
             Your journey starts now.
@@ -143,27 +145,36 @@ function Home() {
       {/* Info Section */}
       <div
         id="info-section"
-        className="relative w-full min-h-screen bg-black bg-cover bg-no-repeat bg-center text-black"
+        className="relative w-full min-h-screen bg-BGHome bg-cover bg-no-repeat bg-center text-black"
         ref={infoSectionRef}
       >
         <div className="absolute inset-0 bg-black bg-opacity-65"></div>
         <div className="relative w-full px-6 pt-10">
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center px-4 sm:px-12 mt-20 relative z-10">
+          {/* SERVER INFORMATION Header */}
+          <motion.h2
+            className="text-5xl sm:text-6xl font-bold text-yellow-300 text-center drop-shadow-lg mt-5"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            SERVER INFORMATION
+          </motion.h2>
+
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center px-4 sm:px-12 mt-32 relative z-10">
             {featureCards.map((card, idx) => (
               <div
                 key={idx}
                 className="relative w-full sm:w-80 rounded-lg overflow-visible shadow-lg bg-gradient-to-b from-transparent to-yellow-700 mb-12"
               >
-                {/* Character Image with Slide Animation */}
                 <motion.div
                   className="relative w-full h-32 sm:h-36 flex justify-center items-end -z-20 pointer-events-none"
                   initial={{
-                    x: idx === 0 ? -200 : idx === 1 ? 0 : 200, // Left to right, top to bottom, right to left
-                    y: idx === 1 ? -100 : 0, // Reduce the slide height for CharPNG2
+                    x: idx === 0 ? -200 : idx === 1 ? 0 : idx === 2 ? -200 : 200,
+                    y: idx === 1 ? -100 : idx === 2 ? 0 : 0,
                   }}
                   animate={{
-                    x: isInView ? 0 : idx === 0 ? -200 : idx === 1 ? 0 : 200, // Slide left/right for CharPNG1, right/left for CharPNG3
-                    y: isInView ? 0 : idx === 1 ? -100 : 0, // Slide top/bottom for CharPNG2
+                    x: isInView ? 0 : idx === 0 ? -200 : idx === 1 ? 0 : idx === 2 ? -200 : 200,
+                    y: isInView ? 0 : idx === 1 ? -100 : idx === 2 ? 0 : 0,
                   }}
                   transition={{ type: 'spring', stiffness: 60, damping: 20 }}
                 >
@@ -185,7 +196,7 @@ function Home() {
                         key={i}
                         className="flex items-center gap-3 sm:gap-4 text-base sm:text-lg p-2 rounded-lg transition-colors duration-200 hover:bg-yellow-700 cursor-pointer relative"
                         onMouseEnter={() => handleMouseEnter(item.text)}
-                        onMouseLeave={handleMouseLeave}
+                        onMouseLeave={() => handleMouseLeave()}
                       >
                         <img
                           src={item.icon}
@@ -197,7 +208,9 @@ function Home() {
                         {/* Video content when hovering */}
                         {hoveredItem === item.text && item.video && (
                           <div className="absolute top-1/2 left-full sm:ml-4 -translate-y-1/2 w-80 sm:w-96 bg-gradient-to-br from-yellow-800/90 to-black/90 rounded-xl shadow-2xl border border-yellow-500 p-4 z-10 transition-transform duration-200 transform scale-95 hover:scale-100 ">
-                            <h4 className="text-lg sm:text-xl font-bold text-yellow-200 mb-2">{item.text}</h4>
+                            <h4 className="text-lg sm:text-xl font-bold text-yellow-200 mb-2">
+                              {item.text}
+                            </h4>
                             <video
                               src={item.video}
                               autoPlay
@@ -215,6 +228,65 @@ function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* New Class Section */}
+      <div className="w-full bg-black text-white py-16 px-6">
+        <motion.h2
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="text-4xl sm:text-5xl font-bold text-yellow-300 text-center"
+        >
+          GUILDS
+        </motion.h2>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-8 mt-16">
+          {/* Warrior */}
+          <div className="flex flex-col items-center text-center relative">
+            <img
+              src={Guild1}
+              alt="Warrior"
+              className="w-64 h-full object-cover rounded-lg mb-4"
+            />
+            <img
+              src={TestLogo}
+              alt="Warrior Icon"
+              className="absolute bottom-12 w-16 h-16"  
+            />
+            <span className="text-lg text-yellow-200 mt-2">Warrior</span> 
+          </div>
+
+          {/* Martial Artist */}
+          <div className="flex flex-col items-center text-center relative">
+            <img
+              src={Guild2}
+              alt="Martial Artist"
+              className="w-64 h-full object-cover rounded-lg mb-4"
+            />
+            <img
+              src={TestLogo}
+              alt="Martial Artist Icon"
+              className="absolute bottom-12 w-16 h-16"  
+            />
+            <span className="text-lg text-yellow-200 mt-2">Martial Artist</span>
+          </div>
+
+          {/* Gunner */}
+          <div className="flex flex-col items-center text-center relative">
+            <img
+              src={Guild3}
+              alt="Gunner"
+              className="w-64 h-full object-cover rounded-lg mb-4"
+            />
+            <img
+              src={TestLogo}
+              alt="Gunner Icon"
+              className="absolute bottom-12 w-16 h-16" 
+            />
+            <span className="text-lg text-yellow-200 mt-2">Gunner</span> 
           </div>
         </div>
       </div>

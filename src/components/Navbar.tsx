@@ -2,11 +2,10 @@ import { useState } from "react";
 import { FaHome, FaList } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link } from "react-router-dom";
-
+import Logo from '../assets/Logo.png'
 function Navbar({ activeTab }: { activeTab: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Active Tab Styling
   const getUnderlineClass = (tabName: string) =>
     activeTab === tabName
       ? "absolute left-0 top-8 inline-block w-full h-[2px] bg-yellow-500 shadow-[0px_0px_14px_3px_rgba(255,215,0,0.7)] transition-all duration-300"
@@ -14,8 +13,8 @@ function Navbar({ activeTab }: { activeTab: string }) {
 
   const getTextClass = (tabName: string) =>
     activeTab === tabName
-      ? "text-yellow-500 font-semibold" // Apply yellow color and bold text for active tab
-      : "text-white"; // Default text color for non-active tabs
+      ? "text-yellow-500 font-semibold"
+      : "text-white"; 
 
   return (
     <nav className="bg-black text-white Viga px-6 py-7 sticky top-0 z-50">
@@ -23,7 +22,7 @@ function Navbar({ activeTab }: { activeTab: string }) {
         {/* Logo */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
           <Link to="/">
-            <img src="/path-to-your-logo.png" alt="Logo" className="h-32 w-auto mt-3" />
+            <img src={Logo} alt="Logo" className="h-32 w-auto mt-3" />
           </Link>
         </div>
 

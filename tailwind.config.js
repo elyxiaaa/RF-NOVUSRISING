@@ -5,7 +5,12 @@ export default {
     'node_modules/daisyui/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+       backgroundImage: {
+        'BGHome': "url('/src/assets/BG/BGHome.jpg')",
+        'BGCombination': "url('/src/assets/BG/BGCombination.jpg')",
+      },
+    },
   },
   plugins: [require('daisyui')],
 }
