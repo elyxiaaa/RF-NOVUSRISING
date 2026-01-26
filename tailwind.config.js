@@ -9,6 +9,7 @@ export default {
        backgroundImage: {
         'BGHome': "url('/src/assets/BG/BGHome.jpg')",
         'BGCombination': "url('/src/assets/BG/BGCombination.jpg')",
+        'BGGuilds': "url('/src/assets/BG/BGGuilds.jpg')",
       },
     },
   },
