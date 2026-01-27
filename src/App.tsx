@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
 import Combination from './pages/Combination';
 import TypeCArmor from './pages/subpages/TypeCArmor';
