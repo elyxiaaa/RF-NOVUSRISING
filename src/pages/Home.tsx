@@ -1,12 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; 
 
 import PitbossNotice from '../assets/INFO/PitbossNotice.mp4';
 import DailyKiller from '../assets/INFO/DailyKiller.mp4';
-import StartingArmor from '../assets/INFO/StartingArmor.mp4';
 import KillFeed from '../assets/INFO/KillFeed.mp4';
 
 import BGChar2 from '../assets/CharPNG.png';
@@ -50,13 +47,15 @@ import Video2 from '../assets/Test/Video2.mp4'
 
 
 function Home() {
- const [activeTab, setActiveTab] = useState('home-section');
-  const [hoveredItem, setHoveredItem] = useState(null);
+ const [activeTab ] = useState('home-section');
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [isInView, setIsInView] = useState(false); 
   const infoSectionRef = useRef(null);
 
 
-  const handleMouseEnter = (itemKey) => setHoveredItem(itemKey);
+ // Function to handle mouse enter
+  const handleMouseEnter = (itemKey: string) => setHoveredItem(itemKey);
+  // Function to handle mouse leave
   const handleMouseLeave = () => setHoveredItem(null);
 
 
@@ -70,7 +69,7 @@ function Home() {
     });
   },
   {
-    threshold: 0.1, // Adjust this if the section is not triggering the animation
+    threshold: 0.1, 
   }
 );
 
@@ -91,7 +90,7 @@ function Home() {
       bg: BGChar2,
       char: CharPNG1,
       items: [
-        { icon: IconBanana, text: "Level Cap 50", video: null },
+        { icon: IconBanana, text: "Level Cap 50", video: null, details: 'None', },
         { icon: IconStarting, text: "Classic Experience", video: null },
         { icon: IconNotice, text: "Classic Drop Rate", video: PitbossNotice },
         { icon: IconKill, text: "Classic Animus Experience", video: null },
@@ -117,27 +116,6 @@ function Home() {
         { icon: IconLoot, text: "Autoloot & Autotarget feature / Quest navigation", video: null },
         { icon: IconPrem, text: "Free 2 days premium", video: null },
         { icon: IconLoot, text: "Big prizes on events", video: null },
-      ],
-    },
-  ];
-
-   const streamer2 = [
-    {
-      name: 'Streamer Name 1',
-      image: Erina, 
-      achievements: [
-        { icon: IconPrem, text: 'Top 10 Streamer' },
-        { icon: IconKill, text: '5,000 Kills Milestone' },
-        { icon: IconNotice, text: 'Featured in Streamer Highlights' },
-      ],
-    },
-    {
-      name: 'Streamer Name 2',
-      image: Erina, 
-      achievements: [
-        { icon: IconPrem, text: 'Top 5 Streamer' },
-        { icon: IconKill, text: '10,000 Kills Milestone' },
-        { icon: IconNotice, text: 'Streamed for 1000 hours' },
       ],
     },
   ];

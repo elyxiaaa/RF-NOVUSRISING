@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Test from '../assets/BG/BGHome.jpg';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
@@ -37,7 +37,7 @@ function Combination() {
     },
   ];
 
-  const [activeTab, setActiveTab] = useState('combination-section');
+  const [activeTab] = useState('combination-section');
   
   return (
     <>
