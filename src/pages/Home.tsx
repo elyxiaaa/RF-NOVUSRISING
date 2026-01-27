@@ -46,9 +46,7 @@ import Emmachii from '../assets/STREAMERS/Emmachii.jpg'
 import EmmachiiHovered from '../assets/STREAMERS/EmmachiiHovered.jpg'
 import DarkLineage from '../assets/GUILDS/Guild1.png'
 
-//TEsts
-import Obelisk from '../assets/Test/Obelisk.mp4'
-import RoshBG from '../assets/Test/RoshBG.jpg'
+import Video2 from '../assets/Test/Video2.mp4'
 
 
 function Home() {
@@ -171,298 +169,286 @@ function Home() {
 
 
   return (
-    <>
-      <Navbar activeTab={activeTab} />
-      <div id="home-section" className="w-full bg-black h-screen relative overflow-hidden">
-        <div className="absolute inset-0 bg-black bg-opacity-5"></div>
+   <>
+  <Navbar activeTab={activeTab} />
+  
+  {/* Home Section */}
+  <div id="home-section" className="w-full bg-black h-screen relative overflow-hidden  ">
+    <div className="absolute inset-0 bg-black bg-opacity-5"></div>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-40">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-ITC2 font-extrabold"
-            style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}
-          >
-            The Future Awaits
-          </motion.h1>
+    <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-40">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 0.3 }}
+        className="text-4xl sm:text-6xl lg:text-7xl zen-dots-regular font-extrabold "
+        style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}
+      >
+        The Future Awaits
+      </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-            className="text-lg sm:text-xl lg:text-2xl font-ITC2 text-slate-200 font-medium mb-5 max-w-2xl"
-            style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}
-          >
-            Your journey starts now.
-          </motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 0.5 }}
+        className="text-lg sm:text-xl lg:text-2xl font-ITC2 text-slate-200 font-medium mb-5 max-w-2xl"
+        style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}
+      >
+        Your journey starts now.
+      </motion.p>
 
-          <a href="/download" target="_blank" rel="noopener noreferrer">
-            <motion.button
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.9 }}
-              className="w-72 py-3 px-10 text-2xl font-bold text-white rounded-lg
-                        bg-yellow-600 border border-yellow-500
-                        shadow-lg shadow-yellow-700/50
-                        hover:scale-105
-                        animate-pulseGlow transition-all duration-300"
-            >
-              DOWNLOAD
-            </motion.button>
-          </a>
-        </div>
-      </div>
+      <a href="/download" target="_blank" rel="noopener noreferrer">
+        <motion.button
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.9 }}
+          className="w-72 py-3 px-10 text-2xl font-bold text-white rounded-lg 
+                    bg-yellow-600 border border-yellow-500
+                    shadow-lg shadow-yellow-700/50
+                    hover:scale-105
+                    animate-pulseGlow transition-all duration-300"
+        >
+          DOWNLOAD
+        </motion.button>
+      </a>
+    </div>
+  </div>
 
   {/* Info Section */}
-<div
-  id="info-section"
-  className="relative w-full min-h-screen bg-BGHome bg-cover bg-no-repeat bg-center text-black mb-10" // Added mb-10 for spacing
-  ref={infoSectionRef}
->
-  <div className="absolute inset-0 bg-black bg-opacity-65"></div>
-  <div className="relative w-full px-6 pt-10">
-    {/* SERVER INFORMATION Header */}
-    <motion.h2
-      className="text-5xl sm:text-6xl font-bold text-yellow-300 text-center drop-shadow-lg mt-5"
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.2 }}
-    >
-      SERVER INFORMATION
-    </motion.h2>
-
-    <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center px-4 sm:px-12 mt-32 relative z-10">
-      {featureCards.map((card, idx) => (
-        <div
-          key={idx}
-          className="relative w-full sm:w-80 rounded-lg overflow-visible shadow-lg bg-gradient-to-b from-transparent to-yellow-700 mb-12"
-        >
-          <motion.div
-  className="relative w-full h-32 sm:h-36 flex justify-center items-end -z-20 pointer-events-none"
-  initial={{
-    x: idx === 0 ? -200 : idx === 1 ? 0 : idx === 2 ? -200 : 200,
-    y: idx === 1 ? -100 : idx === 2 ? 0 : 0,
-  }}
-  animate={{
-    x: isInView ? 0 : idx === 0 ? -200 : idx === 1 ? 0 : idx === 2 ? -200 : 200,
-    y: isInView ? 0 : idx === 1 ? -100 : idx === 2 ? 0 : 0,
-  }}
-  transition={{ type: 'spring', stiffness: 60, damping: 20 }}
->
-  <img
-    src={card.char}
-    alt="Character"
-    className="w-72 sm:w-96 h-72 sm:h-96 object-contain -mb-20 sm:-mb-28"
-  />
-</motion.div>
-
-
-          {/* Card Content */}
-          <div className="p-4 relative">
-            <h3 className="text-lg sm:text-xl font-bold text-yellow-200 border-y border-yellow-500 mb-3 mt-10 text-center py-3">
-              {card.title}
-            </h3>
-            <ul className="flex flex-col gap-3 text-yellow-100">
-              {card.items.map((item, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 sm:gap-4 text-base sm:text-lg p-2 rounded-lg transition-colors duration-200 hover:bg-yellow-700 cursor-pointer relative"
-                  onMouseEnter={() => handleMouseEnter(item.text)}
-                  onMouseLeave={() => handleMouseLeave()}
-                >
-                  <img
-                    src={item.icon}
-                    alt={item.text}
-                    className="w-6 h-6 sm:w-8 sm:h-8"
-                  />
-                  <span>{item.text}</span>
-
-                  {/* Video content when hovering */}
-                  {hoveredItem === item.text && item.video && (
-                    <div className="absolute top-1/2 left-full sm:ml-4 -translate-y-1/2 w-80 sm:w-96 bg-gradient-to-br from-yellow-800/90 to-black/90 rounded-xl shadow-2xl border border-yellow-500 p-4 z-10 transition-transform duration-200 transform scale-95 hover:scale-100 ">
-                      <h4 className="text-lg sm:text-xl font-bold text-yellow-200 mb-2">
-                        {item.text}
-                      </h4>
-                      <video
-                        src={item.video}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full sm:h-56 h-52 object-cover mb-2"
-                      />
-                      <p className="text-yellow-100 text-sm sm:text-base">{item.details}</p>
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-
-{/* Unveil the Forgotten Secrets Section */}
-<div className="relative w-full min-h-screen ">
-  <div className="relative z-10 flex flex-col items-center justify-center pt-36 text-center px-4">
-    <h1 className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 font-bold mb-4">
-      Uncover the Novus's Ancients
-    </h1>
-    <p className="max-w-2xl text-sm sm:text-base text-white mb-12 font-BD font-bold">
-      A lone adventurer, stripped of memories, stands at the heart of a vast continent. <br />
-      Embark on a journey to rediscover the mysteries of this world.
-    </p>
-  </div>
-
-  {/* First Section: Limitless Adventures */}
-  <div className="relative z-10 flex flex-col items-center justify-center text-center mt-10 px-4 mb-20">
-    <div className="flex flex-col md:flex-row items-center md:items-end gap-8 md:gap-24">
-      {/* Text */}
-      <div className="text-left max-w-full sm:max-w-lg">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-yellow-300 mb-4 BigShoulder">
-          Unique Feature 1
-        </h2>
-        <p className="text-white text-sm sm:text-base mb-6 font-bold">
-          Wander the vast lands of RF, tame powerful beasts, and master new combat systems. Explore endless possibilities, discover unique combinations, and shape your destiny in a world full of adventure.
-        </p>
-      </div>
-
-      {/* Video */}
-      <video
-        src={Obelisk}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="w-full sm:w-[70%] md:w-[50%] max-w-lg rounded-md shadow-lg"
-        style={{ animationDelay: '0s' }}
+  <div
+    id="info-section"
+    className="relative w-full min-h-screen bg-BGHome bg-cover bg-no-repeat bg-center text-black "
+    ref={infoSectionRef}
+  >
+    <div className="absolute inset-0 bg-black bg-opacity-65"></div>
+    <div className="relative w-full px-6 pt-10">
+      <motion.h2
+        className="text-4xl sm:text-5xl font-bold  text-yellow-300 text-center drop-shadow-lg mt-5"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
       >
-        Your browser does not support the video tag.
-      </video>
+        SERVER INFORMATION
+      </motion.h2>
+
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center px-4 sm:px-12 mt-32 relative z-10">
+        {featureCards.map((card, idx) => (
+          <div
+            key={idx}
+            className="relative w-full sm:w-80 md:w-96 rounded-lg overflow-visible shadow-lg bg-gradient-to-b from-transparent to-yellow-700 mb-12"
+          >
+            <motion.div
+              className="relative w-full h-32 sm:h-36 flex justify-center items-end -z-20 pointer-events-none"
+              initial={{
+                x: idx === 0 ? -200 : idx === 1 ? 0 : idx === 2 ? -200 : 200,
+                y: idx === 1 ? -100 : idx === 2 ? 0 : 0,
+              }}
+              animate={{
+                x: isInView ? 0 : idx === 0 ? -200 : idx === 1 ? 0 : idx === 2 ? -200 : 200,
+                y: isInView ? 0 : idx === 1 ? -100 : idx === 2 ? 0 : 0,
+              }}
+              transition={{ type: 'spring', stiffness: 60, damping: 20 }}
+            >
+              <img
+                src={card.char}
+                alt="Character"
+                className="w-72 sm:w-96 h-72 sm:h-96 object-contain -mb-20 sm:-mb-28"
+              />
+            </motion.div>
+
+            {/* Card Content */}
+            <div className="p-4 relative">
+              <h3 className="text-lg sm:text-xl font-bold text-yellow-200 border-y border-yellow-500 mb-3 mt-10 text-center py-3">
+                {card.title}
+              </h3>
+              <ul className="flex flex-col gap-3 text-yellow-100">
+                {card.items.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-center gap-3 sm:gap-4 text-base sm:text-lg p-2 rounded-lg transition-colors duration-200 hover:bg-yellow-700 cursor-pointer relative"
+                    onMouseEnter={() => handleMouseEnter(item.text)}
+                    onMouseLeave={() => handleMouseLeave()}
+                  >
+                    <img
+                      src={item.icon}
+                      alt={item.text}
+                      className="w-6 h-6 sm:w-8 sm:h-8"
+                    />
+                    <span>{item.text}</span>
+
+                    {/* Video content when hovering */}
+                    {hoveredItem === item.text && item.video && (
+                      <div className="absolute top-1/2 left-full sm:ml-4 -translate-y-1/2 w-80 sm:w-96 bg-gradient-to-br from-yellow-800/90 to-black/90 rounded-xl shadow-2xl border border-yellow-500 p-4 z-10 transition-transform duration-200 transform scale-95 hover:scale-100">
+                        <h4 className="text-lg sm:text-xl font-bold text-yellow-200 mb-2">
+                          {item.text}
+                        </h4>
+                        <video
+                          src={item.video}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full sm:h-56 h-52 object-cover mb-2"
+                        />
+                        <p className="text-yellow-100 text-sm sm:text-base">{item.details}</p>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
 
-  {/* Background Image with Text */}
-  <div className="relative z-20 mb-10"> 
+    <div className="relative w-full mt-20 mb-20">
+    {/* Unveil the Forgotten Secrets Section */}
+    <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 ">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 font-bold mb-4">
+        Uncover the Novus's Ancients
+      </h1>
+      <p className="max-w-2xl text-sm sm:text-base text-white mb-12 font-BD font-bold">
+        Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum. <br />
+        Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum.
+      </p>
+    </div>
 
-    <div className="relative w-full sm:w-[60%] mx-auto h-[350px] overflow-hidden">
-      <div className="absolute left-0 right-0 flex justify-center">
+    {/* First Section: Limitless Adventures */}
+    <div className="relative z-10 flex flex-col items-center justify-center text-center mt-10 px-4 mb-20">
+      <div className="flex flex-col md:flex-row items-center md:items-end gap-8 md:gap-24">
+        {/* Text */}
+        <div className="text-left max-w-full sm:max-w-lg">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-yellow-300 mb-4">
+            Unique Feature 1
+          </h2>
+          <p className="text-white text-sm sm:text-base mb-6 font-bold">
+          Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.
+          </p>
+        </div>
+
+        {/* Video */}
         <video
-          src={Obelisk}
+          src={Video2}
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover object-center max-w-none pointer-events-none"
-        />
+          className="w-full sm:w-[70%] md:w-[50%] max-w-lg rounded-md shadow-lg border"
+          style={{ animationDelay: '0s' }}
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
 
-    {/* Text Below the Image (Aligned with Background Image) */}
-    <div className="text-left mt-4 sm:mt-6 sm:w-[60%] mx-auto">
-      {/* Heading (h2) */}
-      <h2 className="text-3xl sm:text-4xl font-bold text-yellow-300 drop-shadow-lg mb-4">
-        Countless Battles
-      </h2>
+    {/* Background Image with Text */}
 
-      {/* Paragraph */}
-      <p className="text-white/90 text-sm sm:text-base drop-shadow font-bold">
-        Fight back the forces that threaten the world or test your might against other Adventurers.
-        <br />
-        Lead your guild to victory in battle to earn great renown and greater wealth.
-      </p>
+      <div className="relative w-full sm:w-[60%] mx-auto h-[350px] overflow-hidden border rounded-lg border-yellow-300 ">
+        <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 flex justify-center">
+          <video
+            src={Video2}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover max-w-none pointer-events-none"
+          />
+        </div>
+      </div>
+
+      <div className="text-left mt-4 sm:mt-6 sm:w-[60%] mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-yellow-300 drop-shadow-lg mb-4">
+          Nostalgic Battles
+        </h2>
+
+        <p className="text-white/90 text-sm sm:text-base drop-shadow font-bold">
+          Fight back the forces that threaten the world or test your might against other Adventurers.
+          <br />
+          Lead your guild to victory in battle to earn great renown and greater wealth.
+        </p>
+      </div>
+    </div>
+ 
+
+  {/* Guilds Section */}
+  <div className="relative w-full min-h-screen bg-black bg-cover bg-no-repeat bg-center mb-0"> {/* Fixed this issue */}
+    <div className="absolute inset-0 bg-black bg-opacity-65 z-0"></div>
+
+    <div className="w-full text-white py-16 px-6 z-10 relative">
+      <motion.h2
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        className="text-4xl sm:text-5xl font-bold text-yellow-300 text-center"
+      >
+        GUILDS
+      </motion.h2>
+
+      <div className="flex flex-wrap justify-center gap-8 mt-16 relative">
+        {guilds.map((guild, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ opacity: 1 }}
+            className="flex flex-col items-center text-center relative group"
+          >
+            <img
+              src={guild.image}
+              alt={guild.name}
+              className="w-64 h-64 object-cover rounded-lg mb-4 transition-all duration-300 group-hover:opacity-50 group-hover:grayscale"
+            />
+
+            <div className="absolute inset-0 bg-black opacity-0 transition-all duration-300 flex justify-center items-center group-hover:opacity-80">
+              <button className="bg-yellow-300 text-black py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Apply Guild
+              </button>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
   </div>
-</div>
+  </div>
 
-
-    <div className="relative w-full min-h-screen bg-black bg-cover bg-no-repeat bg-center border-2 border-yellow-500">
-  <div className="absolute inset-0 bg-black bg-opacity-65 z-0"></div>  
-
-  <div className="w-full text-white py-16 px-6 z-10 relative"> 
+  {/* Partnered Streamers Section */}
+  <div className="w-full bg-black text-white py-16 px-6 border-2 border-yellow-500">
     <motion.h2
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.2 }}
       className="text-4xl sm:text-5xl font-bold text-yellow-300 text-center"
     >
-      GUILDS
+      PARTNERED STREAMERS
     </motion.h2>
 
-    <div className="flex flex-wrap justify-center gap-8 mt-16 relative">
-      {guilds.map((guild, index) => (
+    <div className="flex flex-wrap justify-center gap-10 mt-16 relative">
+      {streamers.map((streamers, index) => (
         <motion.div
           key={index}
           whileHover={{ opacity: 1 }}
-          className="flex flex-col items-center text-center relative group"
+          className="flex flex-col items-center text-center relative group cursor-pointer"
+          onClick={() => window.open(streamers.link, "_blank")}
         >
           <img
-            src={guild.image}
-            alt={guild.name}
-            className="w-64 h-64 object-cover rounded-lg mb-4 transition-all duration-300 group-hover:opacity-50 group-hover:grayscale"
+            src={streamers.image}
+            className="w-56 h-[500px] object-cover border-x border-yellow-500 mb-4 transition-all duration-300 group-hover:opacity-0"
           />
 
-          {/* Hover effect */}
-          <div className="absolute inset-0 bg-black opacity-0 transition-all duration-300 flex justify-center items-center group-hover:opacity-80">
-            <button className="bg-yellow-300 text-black py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Apply Guild
-            </button>
-          </div>
+          <img
+            src={streamers.hoverImage}
+            className="w-60 h-[500px] object-cover absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+          />
+
+          <img
+            src={streamers.logo}
+            className="absolute bottom-0 w-32 h-32"
+          />
         </motion.div>
       ))}
     </div>
   </div>
-</div>
-</div>
+</>
 
-<div className="w-full bg-black text-white py-16 px-6 border-2 border-yellow-500">
-  <motion.h2
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.2 }}
-    className="text-4xl sm:text-5xl font-bold text-yellow-300 text-center"
-  >
-    PARTNERED STREAMERS
-  </motion.h2>
-
-  <div className="flex flex-wrap justify-center gap-10 mt-16 relative">
-    {streamers.map((streamers, index) => (
-      <motion.div
-        key={index}
-        whileHover={{ opacity: 1 }}
-        className="flex flex-col items-center text-center relative group cursor-pointer"
-         onClick={() => window.open(streamers.link, "_blank")} 
-      >
-        {/* Default Image */}
-        <img
-          src={streamers.image}
-          className="w-56 h-[500px] object-cover border-x border-yellow-500 mb-4 transition-all duration-300 group-hover:opacity-0"
-        />
-        
-        
-        {/* Hover Image */}
-        <img
-          src={streamers.hoverImage}
-          className="w-60 h-[500px] object-cover  absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-        />
-        
-        {/* Guild Logo */}
-        <img
-          src={streamers.logo}
-          className="absolute bottom-0 w-32 h-32"
-        />
-      </motion.div>
-    ))}
-  </div>
-</div>
-
-
-
-
-
-    </>
   );
 }
 

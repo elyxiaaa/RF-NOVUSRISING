@@ -17,21 +17,21 @@ function Combination() {
     {
       id: 2,
       image: Test,
-      title: 'ARC Raiders',
+      title: 'Type C Weapon Crafting',
       details: 'See more',
       link: '/Combination/TypeCArmor',
     },
     {
       id: 3,
       image: Test,
-      title: 'BabySteps',
+      title: 'Type C Weapon Crafting',
       details: 'See more',
       link: '/Combination/TypeCArmor',
     },
     {
       id: 4,
       image: Test,
-      title: 'Balatro',
+      title: 'Type C Weapon Crafting',
       details: 'See more',
       link: '/Combination/TypeCArmor',
     },
@@ -51,7 +51,7 @@ function Combination() {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-5xl font-extrabold text-center text-yellow-600 mb-8"
+            className="text-5xl font-extrabold text-center text-yellow-300 mb-8"
           >
             Combination Guide
           </motion.h2>
