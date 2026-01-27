@@ -44,7 +44,7 @@ import EmmachiiHovered from '../assets/STREAMERS/EmmachiiHovered.jpg'
 import DarkLineage from '../assets/GUILDS/Guild1.png'
 
 import Video2 from '../assets/Test/Video2.mp4'
-
+import HomeBG from '../assets/BG/Home.mp4'
 
 function Home() {
  const [activeTab ] = useState('home-section');
@@ -152,6 +152,14 @@ function Home() {
   
   {/* Home Section */}
   <div id="home-section" className="w-full bg-black h-screen relative overflow-hidden  ">
+     <video
+    src={HomeBG}
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+  />
     <div className="absolute inset-0 bg-black bg-opacity-5"></div>
 
     <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-40">
