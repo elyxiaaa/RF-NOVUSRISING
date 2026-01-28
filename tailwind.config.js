@@ -19,6 +19,22 @@ export default {
         ITC2: ['ITC2', 'sans-serif'],
         StrongSword: ['StrongSword', 'sans-serif'],
       },
+      keyframes: {
+        pulseGlow: {
+          '0%': {
+            boxShadow: '0 0 10px rgba(255, 215, 0, 0.5)',
+          },
+          '50%': {
+            boxShadow: '0 0 20px rgba(255, 215, 0, 1)',
+          },
+          '100%': {
+            boxShadow: '0 0 10px rgba(255, 215, 0, 0.5)',
+          },
+        },
+      },
+      animation: {
+        pulseGlow: 'pulseGlow 1.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [require('daisyui')],
