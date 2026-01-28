@@ -197,16 +197,17 @@ function Home() {
   {/* Info Section */}
   <div
     id="info-section"
-    className="relative w-full min-h-screen bg-BGLong bg-cover bg-no-repeat bg-center text-black "
+    className="relative w-full h-max bg-BGLong bg-cover bg-no-repeat bg-center text-black "
     ref={infoSectionRef}
   >
-    <div className="absolute inset-0 bg-black bg-opacity-65"></div>
+    <div className="absolute inset-0 bg-gradient-to-b from-black/70 from-1% via-black/30 to-black to-90% "></div>
     <div className="relative w-full px-6 pt-10">
       <motion.h2
         className="text-4xl sm:text-5xl md:text-6xl font-medium  text-yellow-300 text-center drop-shadow-lg mt-16 font-StrongSword "
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
+         style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}
       >
         SERVER INFORMATION
       </motion.h2>
@@ -285,10 +286,14 @@ function Home() {
     <div className="relative w-full mt-20 mb-20">
     {/* Unveil the Forgotten Secrets Section */}
     <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 ">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 font-StrongSword font-medium mb-4">
+      <h1 
+       style={{ textShadow: '10px 10px 10px rgba(0,0,0,0.8)' }}
+      className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 font-StrongSword font-medium mb-4">
         Uncover the Novus's Ancients
       </h1>
-      <p className="max-w-2xl text-sm sm:text-base text-white mb-12 BigShoulders font-medium">
+      <p
+       style={{ textShadow: '10px 10px 10px rgba(0,0,0,0.8)' }} 
+      className="max-w-2xl text-sm sm:text-base text-white mb-12 BigShoulders font-medium">
         Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum. <br />
         Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum.
       </p>
