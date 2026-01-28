@@ -152,46 +152,47 @@ function Home() {
   <Navbar activeTab={activeTab} />
   
   {/* Home Section */}
-  <div id="home-section" className="w-full bg-black h-screen relative overflow-hidden ">
-     <video
+<div id="home-section" className="w-full bg-black h-screen relative overflow-hidden">
+  <video
     src={HomeBG}
     autoPlay
     loop
     muted
     playsInline
-    className="absolute inset-0 w-full h-full object-cover"
+    className="absolute top-0 left-0 w-full h-full object-cover"
   />
-    <div className="absolute inset-0 bg-black bg-opacity-5"></div>
 
-    <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-40 ">
+  <div className="absolute inset-0 bg-black bg-opacity-5"></div>
 
+  <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-20 md:mb-40">
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1.2, delay: 0.5 }}
+      className="text-lg sm:text-xl lg:text-2xl font-StrongSword text-slate-200 font-medium mb-5 max-w-2xl"
+      style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}
+    >
+      Your journey starts now.
+    </motion.p>
 
-      <motion.p
-        initial={{ opacity: 0, y: 20 }}
+    <a href="/download" target="_blank" rel="noopener noreferrer">
+      <motion.button
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.5 }}
-        className="text-lg sm:text-xl lg:text-2xl font-StrongSword text-slate-200 font-medium mb-5 max-w-2xl "
-        style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}
+        transition={{ duration: 1, delay: 0.9 }}
+        className="w-72 py-3 px-10 text-2xl font-bold text-white rounded-lg 
+                  bg-yellow-600 border border-yellow-500
+                  shadow-lg shadow-yellow-700/50
+                  hover:scale-105
+                  animate-pulseGlow transition-all duration-300 BigShoulders"
       >
-        Your journey starts now.
-      </motion.p>
-
-      <a href="/download" target="_blank" rel="noopener noreferrer">
-        <motion.button
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9 }}
-          className="w-72 py-3 px-10 text-2xl font-bold text-white rounded-lg 
-                    bg-yellow-600 border border-yellow-500
-                    shadow-lg shadow-yellow-700/50
-                    hover:scale-105
-                    animate-pulseGlow transition-all duration-300 BigShoulders"
-        >
-          DOWNLOAD
-        </motion.button>
-      </a>
-    </div>
+        DOWNLOAD
+      </motion.button>
+    </a>
   </div>
+</div>
+
+
 
   {/* Info Section */}
   <div
