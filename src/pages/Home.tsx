@@ -151,7 +151,7 @@ function Home() {
   <Navbar activeTab={activeTab} />
   
   {/* Home Section */}
-  <div id="home-section" className="w-full bg-black h-screen relative overflow-hidden  ">
+  <div id="home-section" className="w-full bg-black h-screen relative overflow-hidden ">
      <video
     src={HomeBG}
     autoPlay
@@ -162,22 +162,14 @@ function Home() {
   />
     <div className="absolute inset-0 bg-black bg-opacity-5"></div>
 
-    <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-40">
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.3 }}
-        className="text-4xl sm:text-6xl lg:text-7xl zen-dots-regular font-extrabold "
-        style={{ textShadow: '2px 2px 6px rgba(0,0,0,0.8)' }}
-      >
-        The Future Awaits
-      </motion.h1>
+    <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-40 ">
+
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.5 }}
-        className="text-lg sm:text-xl lg:text-2xl font-ITC2 text-slate-200 font-medium mb-5 max-w-2xl"
+        className="text-lg sm:text-xl lg:text-2xl font-StrongSword text-slate-200 font-medium mb-5 max-w-2xl "
         style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}
       >
         Your journey starts now.
@@ -192,7 +184,7 @@ function Home() {
                     bg-yellow-600 border border-yellow-500
                     shadow-lg shadow-yellow-700/50
                     hover:scale-105
-                    animate-pulseGlow transition-all duration-300"
+                    animate-pulseGlow transition-all duration-300 BigShoulders"
         >
           DOWNLOAD
         </motion.button>
@@ -209,7 +201,7 @@ function Home() {
     <div className="absolute inset-0 bg-black bg-opacity-65"></div>
     <div className="relative w-full px-6 pt-10">
       <motion.h2
-        className="text-4xl sm:text-5xl font-bold  text-yellow-300 text-center drop-shadow-lg mt-5"
+        className="text-4xl sm:text-5xl md:text-6xl font-medium  text-yellow-300 text-center drop-shadow-lg mt-16 font-StrongSword "
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
@@ -244,10 +236,10 @@ function Home() {
 
             {/* Card Content */}
             <div className="p-4 relative">
-              <h3 className="text-lg sm:text-xl font-bold text-yellow-200 border-y border-yellow-500 mb-3 mt-10 text-center py-3">
+              <h3 className="text-lg sm:text-xl font-medium text-yellow-200 border-y border-yellow-500 mb-3 mt-10 text-center py-3 font-StrongSword">
                 {card.title}
               </h3>
-              <ul className="flex flex-col gap-3 text-yellow-100">
+              <ul className="flex flex-col gap-3 text-yellow-100 BigShoulders">
                 {card.items.map((item, i) => (
                   <li
                     key={i}
@@ -291,10 +283,10 @@ function Home() {
     <div className="relative w-full mt-20 mb-20">
     {/* Unveil the Forgotten Secrets Section */}
     <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 ">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 font-bold mb-4">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 font-StrongSword font-medium mb-4">
         Uncover the Novus's Ancients
       </h1>
-      <p className="max-w-2xl text-sm sm:text-base text-white mb-12 font-BD font-bold">
+      <p className="max-w-2xl text-sm sm:text-base text-white mb-12 BigShoulders font-medium">
         Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum. <br />
         Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum.
       </p>
@@ -305,10 +297,10 @@ function Home() {
       <div className="flex flex-col md:flex-row items-center md:items-end gap-8 md:gap-24">
         {/* Text */}
         <div className="text-left max-w-full sm:max-w-lg">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-yellow-300 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-StrongSword font-medium text-yellow-300 mb-4">
             Unique Feature 1
           </h2>
-          <p className="text-white text-sm sm:text-base mb-6 font-bold">
+          <p className="text-white text-sm sm:text-base mb-6 font-medium BigShoulders">
           Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum.
           </p>
         </div>
@@ -320,7 +312,7 @@ function Home() {
           loop
           muted
           playsInline
-          className="w-full sm:w-[70%] md:w-[50%] max-w-lg rounded-md shadow-lg border"
+          className="w-full sm:w-[70%] md:w-[50%] max-w-lg rounded-md shadow-lg "
           style={{ animationDelay: '0s' }}
         >
           Your browser does not support the video tag.
@@ -330,7 +322,7 @@ function Home() {
 
     {/* Background Image with Text */}
 
-      <div className="relative w-full sm:w-[60%] mx-auto h-[350px] overflow-hidden border rounded-lg border-yellow-300 ">
+      <div className="relative w-full sm:w-[60%] mx-auto h-[350px] overflow-hidden rounded-lg">
         <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 flex justify-center">
           <video
             src={Video2}
@@ -343,12 +335,12 @@ function Home() {
         </div>
       </div>
 
-      <div className="text-left mt-4 sm:mt-6 sm:w-[60%] mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-yellow-300 drop-shadow-lg mb-4">
+      <div className="text-right mt-4 sm:mt-6 sm:w-[60%] mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-medium text-yellow-300 drop-shadow-lg mb-4 font-StrongSword">
           Nostalgic Battles
         </h2>
 
-        <p className="text-white/90 text-sm sm:text-base drop-shadow font-bold">
+        <p className="text-white/90 text-sm sm:text-base drop-shadow font-medium BigShoulders">
           Fight back the forces that threaten the world or test your might against other Adventurers.
           <br />
           Lead your guild to victory in battle to earn great renown and greater wealth.
@@ -366,9 +358,9 @@ function Home() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2 }}
-        className="text-4xl sm:text-5xl font-bold text-yellow-300 text-center"
+        className="text-4xl sm:text-5xl md:text-6xl mt-16 font-medium font-StrongSword text-yellow-300 text-center"
       >
-        GUILDS
+        ACTIVE GUILDS
       </motion.h2>
 
       <div className="flex flex-wrap justify-center gap-8 mt-16 relative">
@@ -385,7 +377,7 @@ function Home() {
             />
 
             <div className="absolute inset-0 bg-black opacity-0 transition-all duration-300 flex justify-center items-center group-hover:opacity-80">
-              <button className="bg-yellow-300 text-black py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button className="bg-yellow-300 text-black py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mdeium BigShoulders">
                 Apply Guild
               </button>
             </div>
@@ -402,7 +394,7 @@ function Home() {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.2 }}
-      className="text-4xl sm:text-5xl font-bold text-yellow-300 text-center"
+      className="text-4xl sm:text-5xl md:text-6xl font-medium font-StrongSword text-yellow-300 text-center"
     >
       PARTNERED STREAMERS
     </motion.h2>

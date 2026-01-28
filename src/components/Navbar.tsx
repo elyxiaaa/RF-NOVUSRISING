@@ -18,7 +18,7 @@ function Navbar({ activeTab }: { activeTab: string }) {
       : "text-white"; 
 
   return (
-    <nav className="bg-black text-white Viga px-6 py-7 sticky top-0 z-50">
+    <nav className="bg-black text-white px-6 py-7 sticky top-0 z-50 font-StrongSword">
       <div className="container mx-auto flex justify-between items-center relative">
         {/* Logo */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block">

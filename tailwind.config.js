@@ -14,6 +14,11 @@ export default {
         'BGGuilds': "url('/src/assets/BGGuilds.jpg')",
         'BGLong': "url('/public/BGLong.png')",
       },
+      fontFamily: {
+        ITC: ['ITC', 'sans-serif'],
+        ITC2: ['ITC2', 'sans-serif'],
+        StrongSword: ['StrongSword', 'sans-serif'],
+      },
     },
   },
   plugins: [require('daisyui')],

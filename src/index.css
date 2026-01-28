@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -12,12 +15,28 @@
 .Iceberg {
   font-family: 'Iceberg', sans-serif;
 }
+.Asimovian {
+  font-family: 'Asimovian', sans-serif;
+}
+.Inter {
+  font-family: 'Inter', sans-serif;
+}
+.BigShoulders {
+  font-family: 'BigShoulders', sans-serif;
+}
 .zen-dots-regular {
   font-family: "ZenDots", sans-serif;
-
 }
 
 @font-face {
     font-family: 'StrongSword';
     src: url('./assets/Fonts/StrongSword.TTF');
+}
+@font-face {
+    font-family: 'ITC';
+    src: url('./assets/Fonts/Elan ITC Std Medium.otf');
+}
+@font-face {
+    font-family: 'ITC2';
+    src: url('./assets/Fonts/Elan ITC Std Book.otf');
 }
