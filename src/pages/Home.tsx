@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'
 import { motion } from 'framer-motion';
 
 import PitbossNotice from '../assets/INFO/PitbossNotice.mp4';
@@ -425,6 +426,7 @@ function Home() {
       ))}
     </div>
   </div>
+  <Footer/>
 </>
 
   );
