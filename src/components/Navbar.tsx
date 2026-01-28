@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaHome, FaList } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link } from "react-router-dom";
-
+import Logo from '../assets/Logo.png'
 
 function Navbar({ activeTab }: { activeTab: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -23,7 +23,7 @@ function Navbar({ activeTab }: { activeTab: string }) {
         {/* Logo */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
           <Link to="/">
-            <img src='../src/assets/Logo.png' alt="Logo" className="h-32 w-auto mt-3" />
+            <img src={Logo} alt="Logo" className="h-32 w-auto mt-3" />
           </Link>
         </div>
 
