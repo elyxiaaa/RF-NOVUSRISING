@@ -6,42 +6,9 @@ import PitbossNotice from '../public/assets/INFO/PitbossNotice.mp4';
 import DailyKiller from '../public/assets/INFO/DailyKiller.mp4';
 import KillFeed from '../public/assets/INFO/KillFeed.mp4';
 
-import BGChar2 from '../public/assets/CharPNG.png';
-import CharPNG1 from '../public/assets/INFO/CardBG1.png';
-import CharPNG2 from '../public/assets/INFO/CardBG2.png';
-import CharPNG3 from '../public/assets/INFO/CardBG3.png';
-
-import IconBanana from '../public/assets/INFO/Icons/level-up.png';
-import IconStarting from '../public/assets/INFO/Icons/Starting.png';
-import IconNotice from '../public/assets/INFO/Icons/Notice.png';
-import IconKill from '../public/assets/INFO/Icons/Kill.png';
-import IconTop from '../public/assets/INFO/Icons/Top1.png';
-import IconWeaponCraft from '../public/assets/INFO/Icons/WeaponCraft.png';
-import IconArmorCraft from '../public/assets/INFO/Icons/ArmorCraft.png';
-import IconHelm from '../public/assets/INFO/Icons/Helm.png';
-import IconLoot from '../public/assets/INFO/Icons/Loot.png';
-import IconPrem from '../public/assets/INFO/Icons/Premium.png';
-import IconGlider from '../public/assets/INFO/Icons/Glider.png';
 
 import GuildLogo1 from '../public/assets/GUILDS/GUILD-LOGO/GuildLogo1.png';
 import GuildLogo2 from '../public/assets/GUILDS/GUILD-LOGO/GuildLogo2.png';
-
-
-import ProfB from '../public/assets/STREAMERS/ProfB.jpg'
-import ProfBHovered from '../public/assets/STREAMERS/ProfBHovered.jpg'
-import Erina from '../public/assets/STREAMERS/Erina.jpg'
-import ErinaHovered from '../public/assets/STREAMERS/ErinaHovered.jpg'
-import Fallen from '../public/assets/STREAMERS/Fallen.jpg'
-import FallenHovered from '../public/assets/STREAMERS/FallenHovered.jpg'
-import Tyke from '../public/assets/STREAMERS/Tyke.jpg'
-import TykeHovered from '../public/assets/STREAMERS/TykeHovered.jpg'
-import Kazumi from '../public/assets/STREAMERS/Kazumi.jpg'
-import KazumiHovered from '../public/assets/STREAMERS/KazumiHovered.jpg'
-import Yendere from '../public/assets/STREAMERS/Yendere.jpg'
-import YendereHovered from '../public/assets/STREAMERS/YendereHovered.jpg'
-import Emmachii from '../public/assets/STREAMERS/Emmachii.jpg'
-import EmmachiiHovered from '../public/assets/STREAMERS/EmmachiiHovered.jpg'
-import DarkLineage from '../public/assets/GUILDS/Guild1.png'
 
 import Video2 from '../public/assets/Test/Video2.mp4'
 import HomeBG from '../public/assets/BG/Home.mp4'
