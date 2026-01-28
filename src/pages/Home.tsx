@@ -90,7 +90,7 @@ function Home() {
       bg: BGChar2,
       char: CharPNG1,
       items: [
-        { icon: IconBanana, text: "Level Cap 50", video: null, details: 'None', },
+        { icon: IconBanana, text: "Level Cap 50", video: null, details: 'None try', },
         { icon: IconStarting, text: "Classic Experience", video: null },
         { icon: IconNotice, text: "Classic Drop Rate", video: PitbossNotice },
         { icon: IconKill, text: "Classic Animus Experience", video: null },
