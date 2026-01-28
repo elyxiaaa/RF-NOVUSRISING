@@ -2,35 +2,35 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; 
-import Test from '../assets/BG/BGHome.jpg';
+import GuildLogo2 from '../assets/GUILDS/GUILD-LOGO/GuildLogo2.png';
 
 function Combination() {
 
   const Combination = [
     {
       id: 1,
-      image: Test,
+      image: GuildLogo2,
       title: 'Type C Weapon Crafting',
       details: 'See more',
       link: '/Combination/TypeCArmor', 
     },
     {
       id: 2,
-      image: Test,
+      image: GuildLogo2,
       title: 'Type C Weapon Crafting',
       details: 'See more',
       link: '/Combination/TypeCArmor',
     },
     {
       id: 3,
-      image: Test,
+      image: GuildLogo2,
       title: 'Type C Weapon Crafting',
       details: 'See more',
       link: '/Combination/TypeCArmor',
     },
     {
       id: 4,
-      image: Test,
+      image: GuildLogo2,
       title: 'Type C Weapon Crafting',
       details: 'See more',
       link: '/Combination/TypeCArmor',

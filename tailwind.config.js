@@ -9,10 +9,10 @@ export default {
   theme: {
     extend: {
        backgroundImage: {
-  'BGHome': "url('/src/assets/BG/BGHome.jpg')",
-  'BGCombination': "url('/src/assets/BG/BGCombination.jpg')",
-  'BGGuilds': "url('/src/assets/BG/BGGuilds.jpg')",
-  'BGLong': "url('/src/assets/BG/BGLong.png')",
+  'BGHome': "url('/src/assets/BGHome.jpg')",
+  'BGCombination': "url('/src/assets/BGCombination.jpg')",
+  'BGGuilds': "url('/src/assets/BGGuilds.jpg')",
+  'BGLong': "url('/src/assets/BGLong.png')",
 },
     },
   },

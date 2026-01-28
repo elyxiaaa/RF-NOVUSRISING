@@ -2,8 +2,46 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
+import PitbossNotice from '../assets/INFO/PitbossNotice.mp4';
+import DailyKiller from '../assets/INFO/DailyKiller.mp4';
+import KillFeed from '../assets/INFO/KillFeed.mp4';
+
+import BGChar2 from '../assets/CharPNG.png';
+import CharPNG1 from '../assets/INFO/CardBG1.png';  
+import CharPNG2 from '../assets/INFO/CardBG2.png';
+import CharPNG3 from '../assets/INFO/CardBG3.png';
+
+import IconBanana from '../assets/INFO/Icons/level-up.png';
+import IconStarting from '../assets/INFO/Icons/Starting.png';
+import IconNotice from '../assets/INFO/Icons/Notice.png';
+import IconKill from '../assets/INFO/Icons/Kill.png';
+import IconTop from '../assets/INFO/Icons/Top1.png';
+import IconWeaponCraft from '../assets/INFO/Icons/WeaponCraft.png';
+import IconArmorCraft from '../assets/INFO/Icons/ArmorCraft.png';
+import IconHelm from '../assets/INFO/Icons/Helm.png';
+import IconLoot from '../assets/INFO/Icons/Loot.png';
+import IconPrem from '../assets/INFO/Icons/Premium.png';
+import IconGlider from '../assets/INFO/Icons/Glider.png';
+
 import GuildLogo1 from '../assets/GUILDS/GUILD-LOGO/GuildLogo1.png';
 import GuildLogo2 from '../assets/GUILDS/GUILD-LOGO/GuildLogo2.png';
+
+
+import ProfB from '../assets/STREAMERS/ProfB.jpg'
+import ProfBHovered from '../assets/STREAMERS/ProfBHovered.jpg'
+import Erina from '../assets/STREAMERS/Erina.jpg'
+import ErinaHovered from '../assets/STREAMERS/ErinaHovered.jpg'
+import Fallen from '../assets/STREAMERS/Fallen.jpg'
+import FallenHovered from '../assets/STREAMERS/FallenHovered.jpg'
+import Tyke from '../assets/STREAMERS/Tyke.jpg'
+import TykeHovered from '../assets/STREAMERS/TykeHovered.jpg'
+import Kazumi from '../assets/STREAMERS/Kazumi.jpg'
+import KazumiHovered from '../assets/STREAMERS/KazumiHovered.jpg'
+import Yendere from '../assets/STREAMERS/Yendere.jpg'
+import YendereHovered from '../assets/STREAMERS/YendereHovered.jpg'
+import Emmachii from '../assets/STREAMERS/Emmachii.jpg'
+import EmmachiiHovered from '../assets/STREAMERS/EmmachiiHovered.jpg'
+import DarkLineage from '../assets/GUILDS/Guild1.png'
 
 import Video2 from '../assets/Test/Video2.mp4'
 import HomeBG from '../assets/BG/Home.mp4'
@@ -46,64 +84,66 @@ function Home() {
   }, []);
 
   
-     const featureCards = [
-         {
-             title: "SERVER INFORMATION",
-             bg: '../assets/INFO/Icons/ArmorCraft.png',
-             char: '../assets/INFO/CardBG1.png',
-             items: [
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Level Cap 50", video: null, details: 'None', },
-                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: "Classic Experience", video: null },
-                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: "Classic Drop Rate", video: null },
-                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: "Classic Animus Experience", video: null },
-                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: 'Max Tempo 4,500', video: null },
-             ],
-         },
-         {
-             title: "GEAR ADVANCEMENT",
-             bg: '../assets/INFO/Icons/ArmorCraft.png',
-             char: '../assets/INFO/CardBG1.png',
-             items: [
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Weapon crafting system: Intense to Type C", video: null },
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Armor crafting system: Intense to Type C", video: null },
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Racial Helmet & Glider", video: null },
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Elite Racial Helmet & Glider", video: null },
-             ],
-         },
-         {
-             title: "COMFORTABLE GAMING",
-             bg: '../assets/INFO/Icons/ArmorCraft.png',
-             char: '../assets/INFO/CardBG1.png',
-             items: [
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Autoloot & Autotarget feature / Quest navigation", video: null },
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Free 2 days premium", video: null },
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Big prizes on events", video: null },
-             ],
-         },
-     ];
-     const streamers = [
-         { image: '../assets/STREAMERS/Emmachii.jpg', hoverImage: '../assets/STREAMERS/Emmachii.jpg', logo: GuildLogo2, link: "/guild1" },
-         { image: '../assets/STREAMERS/Emmachii.jpg', hoverImage: '../assets/STREAMERS/Emmachii.jpg', logo: GuildLogo2, link: "/guild2" },
-         { image: '../assets/STREAMERS/Emmachii.jpg', hoverImage: '../assets/STREAMERS/Emmachii.jpg', logo: GuildLogo2, link: "/guild3" },
-         { image: '../assets/STREAMERS/Emmachii.jpg', hoverImage: '../assets/STREAMERS/Emmachii.jpg', logo: GuildLogo2, link: "/guild1" },
-         { image: '../assets/STREAMERS/Emmachii.jpg', hoverImage: '../assets/STREAMERS/Emmachii.jpg', logo: GuildLogo2, link: "/guild1" },
-         { image: '../assets/STREAMERS/Emmachii.jpg', hoverImage: '../assets/STREAMERS/Emmachii.jpg', logo: GuildLogo2, link: "/guild1" },
-         { image: '../assets/STREAMERS/Emmachii.jpg', hoverImage: '../assets/STREAMERS/Emmachii.jpg', logo: GuildLogo2, link: "/guild1" },
-         // Add more guilds as necessary
-     ];
-     const guilds = [
-         { name: "GUILD 1", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo1 },
-         { name: "GUILD 2", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 3", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 4", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 5", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 6", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 6", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 6", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 6", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 6", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-         { name: "GUILD 6", image: '../assets/GUILDS/Guild1.jpg', logo: GuildLogo2 },
-     ];
+  const featureCards = [
+    {
+      title: "SERVER INFORMATION",
+      bg: BGChar2,
+      char: CharPNG1,
+      items: [
+        { icon: IconBanana, text: "Level Cap 50", video: null, details: 'None try', },
+        { icon: IconStarting, text: "Classic Experience", video: null },
+        { icon: IconNotice, text: "Classic Drop Rate", video: PitbossNotice },
+        { icon: IconKill, text: "Classic Animus Experience", video: null },
+        { icon: IconTop, text: 'Max Tempo 4,500', video: DailyKiller },
+      ],
+    },
+    {
+      title: "GEAR ADVANCEMENT",
+      bg: BGChar2,
+      char: CharPNG2,
+      items: [
+        { icon: IconWeaponCraft, text: "Weapon crafting system: Intense to Type C", video: null },
+        { icon: IconArmorCraft, text: "Armor crafting system: Intense to Type C", video: null },
+        { icon: IconHelm, text: "Racial Helmet & Glider", video: KillFeed },
+        { icon: IconGlider, text: "Elite Racial Helmet & Glider", video: null },
+      ],
+    },
+    {
+      title: "COMFORTABLE GAMING",
+      bg: BGChar2,
+      char: CharPNG3,
+      items: [
+        { icon: IconLoot, text: "Autoloot & Autotarget feature / Quest navigation", video: null },
+        { icon: IconPrem, text: "Free 2 days premium", video: null },
+        { icon: IconLoot, text: "Big prizes on events", video: null },
+      ],
+    },
+  ];
+
+  const streamers = [
+  { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: Erina, hoverImage: ErinaHovered, logo: GuildLogo2, link: "/guild2" },
+  { image: Fallen, hoverImage: FallenHovered, logo: GuildLogo2, link: "/guild3" },
+  { image: Tyke, hoverImage: TykeHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: Kazumi, hoverImage: KazumiHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: Yendere, hoverImage: YendereHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: Emmachii, hoverImage: EmmachiiHovered, logo: GuildLogo2,  link: "/guild1" },
+  // Add more guilds as necessary
+];
+
+  const guilds = [
+  { name: "GUILD 1", image: DarkLineage, logo: GuildLogo1 },
+  { name: "GUILD 2", image: DarkLineage, logo: GuildLogo2 },
+  { name: "GUILD 3", image: DarkLineage, logo: GuildLogo2 },
+  { name: "GUILD 4", image: DarkLineage, logo: GuildLogo2 },
+  { name: "GUILD 5", image: DarkLineage, logo: GuildLogo2 },
+  { name: "GUILD 6", image: DarkLineage, logo: GuildLogo2 },
+  { name: "GUILD 6", image: DarkLineage, logo: GuildLogo2 },
+    { name: "GUILD 6", image: DarkLineage, logo: GuildLogo2 },
+      { name: "GUILD 6", image: DarkLineage, logo: GuildLogo2 },
+        { name: "GUILD 6", image: DarkLineage, logo: GuildLogo2 },
+          { name: "GUILD 6", image: DarkLineage, logo: GuildLogo2 },
+];
 
 
   return (
