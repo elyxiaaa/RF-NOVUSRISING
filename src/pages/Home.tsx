@@ -2,11 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-import PitbossNotice from '../public/assets/INFO/PitbossNotice.mp4';
-import DailyKiller from '../public/assets/INFO/DailyKiller.mp4';
-import KillFeed from '../public/assets/INFO/KillFeed.mp4';
-
-
 import GuildLogo1 from '../public/assets/GUILDS/GUILD-LOGO/GuildLogo1.png';
 import GuildLogo2 from '../public/assets/GUILDS/GUILD-LOGO/GuildLogo2.png';
 
@@ -59,9 +54,9 @@ function Home() {
              items: [
                  { icon: '../assets/INFO/Icons/level-up.png', text: "Level Cap 50", video: null, details: 'None', },
                  { icon: '../assets/INFO/Icons/ArmorCraft.png', text: "Classic Experience", video: null },
-                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: "Classic Drop Rate", video: PitbossNotice },
+                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: "Classic Drop Rate", video: null },
                  { icon: '../assets/INFO/Icons/ArmorCraft.png', text: "Classic Animus Experience", video: null },
-                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: 'Max Tempo 4,500', video: DailyKiller },
+                 { icon: '../assets/INFO/Icons/ArmorCraft.png', text: 'Max Tempo 4,500', video: null },
              ],
          },
          {
@@ -71,7 +66,7 @@ function Home() {
              items: [
                  { icon: '../assets/INFO/Icons/level-up.png', text: "Weapon crafting system: Intense to Type C", video: null },
                  { icon: '../assets/INFO/Icons/level-up.png', text: "Armor crafting system: Intense to Type C", video: null },
-                 { icon: '../assets/INFO/Icons/level-up.png', text: "Racial Helmet & Glider", video: KillFeed },
+                 { icon: '../assets/INFO/Icons/level-up.png', text: "Racial Helmet & Glider", video: null },
                  { icon: '../assets/INFO/Icons/level-up.png', text: "Elite Racial Helmet & Glider", video: null },
              ],
          },
