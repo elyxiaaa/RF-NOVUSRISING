@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Test from '../assets/BG/BGHome.jpg';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom'; 
+import Test from '../assets/BG/BGHome.jpg';
 
 function Combination() {
 
