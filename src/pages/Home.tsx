@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
 
-import GuildLogo1 from '../public/assets/GUILDS/GUILD-LOGO/GuildLogo1.png';
-import GuildLogo2 from '../public/assets/GUILDS/GUILD-LOGO/GuildLogo2.png';
+import GuildLogo1 from '../assets/GUILDS/GUILD-LOGO/GuildLogo1.png';
+import GuildLogo2 from '../assets/GUILDS/GUILD-LOGO/GuildLogo2.png';
 
-import Video2 from '../public/assets/Test/Video2.mp4'
-import HomeBG from '../public/assets/BG/Home.mp4'
+import Video2 from '../assets/Test/Video2.mp4'
+import HomeBG from '../assets/BG/Home.mp4'
 
 function Home() {
  const [activeTab ] = useState('home-section');
