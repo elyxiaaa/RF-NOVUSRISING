@@ -203,7 +203,7 @@ function Home() {
   {/* Info Section */}
   <div
     id="info-section"
-    className="relative w-full min-h-screen bg-BGHome bg-cover bg-no-repeat bg-center text-black "
+    className="relative w-full min-h-screen bg-BGLong bg-cover bg-no-repeat bg-center text-black "
     ref={infoSectionRef}
   >
     <div className="absolute inset-0 bg-black bg-opacity-65"></div>

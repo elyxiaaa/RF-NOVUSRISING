@@ -10,6 +10,7 @@ export default {
         'BGHome': "url('/src/assets/BG/BGHome.jpg')",
         'BGCombination': "url('/src/assets/BG/BGCombination.jpg')",
         'BGGuilds': "url('/src/assets/BG/BGGuilds.jpg')",
+        'BGLong': "url('/src/assets/BG/BGLong.png')",
       },
     },
   },
