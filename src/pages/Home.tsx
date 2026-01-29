@@ -52,11 +52,7 @@ function Home() {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [isInView, setIsInView] = useState(false); 
   const infoSectionRef = useRef(null);
-
-
- // Function to handle mouse enter
   const handleMouseEnter = (itemKey: string) => setHoveredItem(itemKey);
-  // Function to handle mouse leave
   const handleMouseLeave = () => setHoveredItem(null);
 
 
@@ -151,17 +147,18 @@ function Home() {
    <>
   <Navbar activeTab={activeTab} />
   
-  {/* Home Section */}
-<div id="home-section" className="w-full bg-black h-screen relative overflow-hidden">
+ {/* Home Section */}
+{/* Home Section */}
+<div id="home-section" className="w-full h-screen bg-black relative">
   <video
     src={HomeBG}
     autoPlay
     loop
     muted
     playsInline
-    className="absolute top-0 left-0 w-full h-full object-cover"
+    className="absolute inset-0 w-full h-full object-cover sm:object-fill"
   />
-
+  
   <div className="absolute inset-0 bg-black bg-opacity-5"></div>
 
   <div className="absolute inset-0 flex flex-col items-center justify-end text-center text-white px-4 mb-20 md:mb-40">
@@ -194,10 +191,12 @@ function Home() {
 
 
 
+
+
   {/* Info Section */}
   <div
     id="info-section"
-    className="relative w-full h-max bg-BGLong bg-cover bg-no-repeat bg-center text-black "
+    className="relative w-full h-full bg-BGLong bg-cover bg-no-repeat bg-center text-black "
     ref={infoSectionRef}
   >
     <div className="absolute inset-0 bg-gradient-to-b from-black/70 from-1% via-black/30 to-black to-90% "></div>
