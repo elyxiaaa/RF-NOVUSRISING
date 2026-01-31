@@ -383,7 +383,7 @@ function Home() {
   id="guild-section"
   className="relative w-full min-h-screen bg-BGGuilds bg-cover bg-no-repeat bg-center mb-0"
 >
-  <div className="absolute inset-0 bg-gradient-to-b from-black/80 from-20% via-yellow-700/20 to-black/90 to-90%"></div>
+  <div className="absolute inset-0 "></div>
 
   <div className="w-full text-white py-16 px-6 z-10 relative">
     <motion.h2
@@ -421,10 +421,11 @@ function Home() {
 
 
  {/* Partnered Streamers Section */}
-<div className="w-full h-full bg-BGStreamers bg-no-repeat bg-cover text-white py-16 px-6 border-2 border-yellow-500 relative">
+<div className="relative w-full h-screen bg-BGStreamers bg-cover bg-no-repeat bg-center mb-0">
   {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+    <div className="absolute inset-0 bg-gradient-to-b from-black/80 from-10% via-yellow-700/20 to-black/90 to-90%"></div>
 
+ <div className="w-full text-white py-16 px-6 z-10 relative">
   <motion.h2
     initial={{ opacity: 0, y: -50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -461,6 +462,7 @@ function Home() {
         />
       </motion.div>
     ))}
+  </div>
   </div>
 </div>
 
