@@ -420,49 +420,48 @@ function Home() {
 </div>
 
 
- {/* Partnered Streamers Section */}
-<div className="relative w-full h-screen bg-BGStreamers bg-cover bg-no-repeat bg-center mb-0">
+{/* Partnered Streamers Section */}
+<div className="relative w-full min-h-screen bg-BGStreamers bg-cover bg-no-repeat bg-center mb-0">
   {/* Dark overlay */}
-    <div className="absolute inset-0 "></div>
+  <div className="absolute inset-0 bg-black opacity-50"></div>
 
- <div className="w-full text-white py-16 px-6 z-10 relative">
-  <motion.h2
-    initial={{ opacity: 0, y: -50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1, delay: 0.2 }}
-    className="text-4xl sm:text-5xl md:text-6xl font-medium font-StrongSword text-yellow-300 text-center relative z-10"
-  >
-    PARTNERED STREAMERS
-  </motion.h2>
+  <div className="w-full text-white py-16 px-6 z-10 relative">
+    <motion.h2
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.2 }}
+      className="text-3xl sm:text-4xl md:text-5xl font-medium font-StrongSword text-yellow-300 text-center relative z-10"
+    >
+      PARTNERED STREAMERS
+    </motion.h2>
 
-  <div className="flex flex-wrap justify-center gap-10 mt-16 relative z-10">
-    {streamers.map((streamer, index) => (
-      <motion.div
-        key={index}
-        whileHover={{ opacity: 1 }}
- className="flex flex-col items-center text-center relative group cursor-pointer transform transition duration-300 ease-in-out
-           group-hover:grayscale hover:!grayscale-0
-           hover:scale-105 hover:shadow-[0_0_50px_10px_#fbbf24]"
-
-        onClick={() => window.open(streamer.link, "_blank")}
-      >
-        <img
-          src={streamer.image}
-          className="w-56 h-[500px] object-cover transition-all duration-300 group-hover:opacity-0"
-        />
-
-        <img
-          src={streamer.hoverImage}
-          className="w-56 h-[500px] object-cover absolute inset-0 top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-        />
-
-        <img
-          src={streamer.logo}
-          className="absolute bottom-0 w-32 h-32"
-        />
-      </motion.div>
-    ))}
-  </div>
+    <div className="flex flex-wrap justify-center gap-8 mt-16 relative z-10">
+      {streamers.map((streamer, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ opacity: 1 }}
+          className="flex flex-col items-center text-center relative group cursor-pointer transform transition duration-300 ease-in-out
+            group-hover:grayscale hover:!grayscale-0
+            hover:scale-105 hover:shadow-[0_0_50px_10px_#fbbf24]"
+          onClick={() => window.open(streamer.link, "_blank")}
+        >
+          <div className="relative w-56 h-[300px] sm:w-64 sm:h-[350px] md:w-72 md:h-[400px]">
+            <img
+              src={streamer.image}
+              className="w-full h-full object-cover transition-all duration-300 group-hover:opacity-0"
+            />
+            <img
+              src={streamer.hoverImage}
+              className="w-full h-full object-cover absolute inset-0 top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            />
+            <img
+              src={streamer.logo}
+              className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            />
+          </div>
+        </motion.div>
+      ))}
+    </div>
   </div>
 </div>
 
