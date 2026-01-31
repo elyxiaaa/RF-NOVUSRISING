@@ -79,11 +79,11 @@ function Home() {
       bg: BGChar2,
       char: CharPNG1,
       items: [
-        { icon: IconTop, text: "Level Cap 50", video: null, details: 'None try', },
-        { icon: IconExp, text: "Classic Experience", video: null },
-        { icon: IconDrop, text: "Classic Drop Rate", video: null },
-        { icon: AnimusIcon, text: "Classic Animus Experience", video: null },
-        { icon: IconStarting, text: 'Max Tempo 4,500', video: null },
+        { icon: IconTop, text: "Level Cap 50", video: null, details: 'None', },
+        { icon: IconExp, text: "Classic Experience", video: null , details: 'None', },
+        { icon: IconDrop, text: "Classic Drop Rate", video: null , details: 'None',},
+        { icon: AnimusIcon, text: "Classic Animus Experience", video: null , details: 'None',},
+        { icon: IconStarting, text: 'Max Tempo 4,500', video: null , details: 'None',},
       ],
     },
     {
@@ -91,10 +91,10 @@ function Home() {
       bg: BGChar2,
       char: CharPNG2,
       items: [
-        { icon: IconWeaponCraft, text: "Weapon crafting system: Intense to Type C", video: WeaponCraft },
-        { icon: IconArmorCraft, text: "Armor crafting system: Intense to Type C", video: null },
-        { icon: IconWeapon, text: "Leons Weapon Crafting", video: null },
-        { icon: IconGlider, text: "Jetpack Crafting", video: null },
+        { icon: IconWeaponCraft, text: "Weapon crafting system: Intense to Type C", video: WeaponCraft , details: 'None',},
+        { icon: IconArmorCraft, text: "Armor crafting system: Intense to Type C", video: null , details: 'None',},
+        { icon: IconWeapon, text: "Leons Weapon Crafting", video: null , details: 'None',},
+        { icon: IconGlider, text: "Jetpack Crafting", video: null , details: 'None',},
       ],
     },
     {
@@ -102,11 +102,11 @@ function Home() {
       bg: BGChar2,
       char: CharPNG3,
       items: [
-        { icon: IconDungeon, text: "Battle Dungeon", video: null },
-        { icon: IconPrem, text: "Free 2 days premium", video: null },
-        { icon: IconNotice, text: "Pitboss Notification", video: null },
-        { icon: IconLoot, text: "Universal UTS", video: null },
-        { icon: IconKill, text: "Kill Notification", video: null },
+        { icon: IconDungeon, text: "Battle Dungeon", video: null , details: 'None',},
+        { icon: IconPrem, text: "Free 2 days premium", video: null , details: 'None',},
+        { icon: IconNotice, text: "Pitboss Notification", video: null , details: 'None',},
+        { icon: IconLoot, text: "Universal UTS", video: null , details: 'None',},
+        { icon: IconKill, text: "Kill Notification", video: null , details: 'None',},
       ],
     },
   ];
