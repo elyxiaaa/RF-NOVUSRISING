@@ -448,12 +448,12 @@ function Home() {
       >
         <img
           src={streamer.image}
-          className="w-56 h-[500px] object-cover  mb-4 transition-all duration-300 group-hover:opacity-0"
+          className="w-56 h-[500px] object-cover transition-all duration-300 group-hover:opacity-0"
         />
 
         <img
           src={streamer.hoverImage}
-          className="w-60 h-[500px] object-cover absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+          className="w-56 h-[500px] object-cover absolute inset-0 top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
         />
 
         <img
