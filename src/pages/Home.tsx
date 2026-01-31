@@ -423,7 +423,7 @@ function Home() {
  {/* Partnered Streamers Section */}
 <div className="relative w-full h-screen bg-BGStreamers bg-cover bg-no-repeat bg-center mb-0">
   {/* Dark overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-black/80 from-10% via-yellow-700/20 to-black/90 to-90%"></div>
+    <div className="absolute inset-0 "></div>
 
  <div className="w-full text-white py-16 px-6 z-10 relative">
   <motion.h2
