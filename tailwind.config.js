@@ -13,6 +13,7 @@ export default {
         'BGCombination': "url('/public/BGCombination.jpg')",
         'BGGuilds': "url('/src/assets/BGGuilds.jpg')",
         'BGLong': "url('/public/BGLong.png')",
+        'BGStreamers': "url('/public/BGStreamers.jpg')",
       },
       fontFamily: {
         ITC: ['ITC', 'sans-serif'],

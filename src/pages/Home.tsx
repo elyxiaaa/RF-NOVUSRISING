@@ -3,23 +3,27 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion';
 
-import PitbossNotice from '../assets/INFO/PitbossNotice.mp4';
-import DailyKiller from '../assets/INFO/DailyKiller.mp4';
-import KillFeed from '../assets/INFO/KillFeed.mp4';
+import WeaponCraft from '../assets/INFO/WeaponCraft.mp4';
+
 
 import BGChar2 from '../assets/CharPNG.png';
 import CharPNG1 from '../assets/INFO/CardBG1.png';  
 import CharPNG2 from '../assets/INFO/CardBG2.png';
 import CharPNG3 from '../assets/INFO/CardBG3.png';
 
-import IconBanana from '../assets/INFO/Icons/level-up.png';
 import IconStarting from '../assets/INFO/Icons/Starting.png';
+
 import IconNotice from '../assets/INFO/Icons/Notice.png';
 import IconKill from '../assets/INFO/Icons/Kill.png';
+import IconExp from '../assets/INFO/Icons/Exp.png'
+import IconDrop from '../assets/INFO/Icons/Drop.png'
+import AnimusIcon from '../assets/INFO/Icons/Animus.png'
+import IconDungeon from '../assets/INFO/Icons/Dungeon.png'
+
 import IconTop from '../assets/INFO/Icons/Top1.png';
 import IconWeaponCraft from '../assets/INFO/Icons/WeaponCraft.png';
 import IconArmorCraft from '../assets/INFO/Icons/ArmorCraft.png';
-import IconHelm from '../assets/INFO/Icons/Helm.png';
+import IconWeapon from '../assets/INFO/Icons/WeaponIcon.png';
 import IconLoot from '../assets/INFO/Icons/Loot.png';
 import IconPrem from '../assets/INFO/Icons/Premium.png';
 import IconGlider from '../assets/INFO/Icons/Glider.png';
@@ -30,18 +34,6 @@ import GuildLogo2 from '../assets/GUILDS/GUILD-LOGO/GuildLogo2.png';
 
 import ProfB from '../assets/STREAMERS/ProfB.jpg'
 import ProfBHovered from '../assets/STREAMERS/ProfBHovered.jpg'
-import Erina from '../assets/STREAMERS/Erina.jpg'
-import ErinaHovered from '../assets/STREAMERS/ErinaHovered.jpg'
-import Fallen from '../assets/STREAMERS/Fallen.jpg'
-import FallenHovered from '../assets/STREAMERS/FallenHovered.jpg'
-import Tyke from '../assets/STREAMERS/Tyke.jpg'
-import TykeHovered from '../assets/STREAMERS/TykeHovered.jpg'
-import Kazumi from '../assets/STREAMERS/Kazumi.jpg'
-import KazumiHovered from '../assets/STREAMERS/KazumiHovered.jpg'
-import Yendere from '../assets/STREAMERS/Yendere.jpg'
-import YendereHovered from '../assets/STREAMERS/YendereHovered.jpg'
-import Emmachii from '../assets/STREAMERS/Emmachii.jpg'
-import EmmachiiHovered from '../assets/STREAMERS/EmmachiiHovered.jpg'
 import DarkLineage from '../assets/GUILDS/Guild1.png'
 
 import Video2 from '../assets/Test/Video2.mp4'
@@ -83,15 +75,15 @@ function Home() {
   
   const featureCards = [
     {
-      title: "SERVER INFORMATION",
+      title: "SERVER RATES",
       bg: BGChar2,
       char: CharPNG1,
       items: [
-        { icon: IconBanana, text: "Level Cap 50", video: null, details: 'None try', },
-        { icon: IconStarting, text: "Classic Experience", video: null },
-        { icon: IconNotice, text: "Classic Drop Rate", video: PitbossNotice },
-        { icon: IconKill, text: "Classic Animus Experience", video: null },
-        { icon: IconTop, text: 'Max Tempo 4,500', video: DailyKiller },
+        { icon: IconTop, text: "Level Cap 50", video: null, details: 'None try', },
+        { icon: IconExp, text: "Classic Experience", video: null },
+        { icon: IconDrop, text: "Classic Drop Rate", video: null },
+        { icon: AnimusIcon, text: "Classic Animus Experience", video: null },
+        { icon: IconStarting, text: 'Max Tempo 4,500', video: null },
       ],
     },
     {
@@ -99,32 +91,34 @@ function Home() {
       bg: BGChar2,
       char: CharPNG2,
       items: [
-        { icon: IconWeaponCraft, text: "Weapon crafting system: Intense to Type C", video: null },
+        { icon: IconWeaponCraft, text: "Weapon crafting system: Intense to Type C", video: WeaponCraft },
         { icon: IconArmorCraft, text: "Armor crafting system: Intense to Type C", video: null },
-        { icon: IconHelm, text: "Racial Helmet & Glider", video: KillFeed },
-        { icon: IconGlider, text: "Elite Racial Helmet & Glider", video: null },
+        { icon: IconWeapon, text: "Leons Weapon Crafting", video: null },
+        { icon: IconGlider, text: "Jetpack Crafting", video: null },
       ],
     },
     {
-      title: "COMFORTABLE GAMING",
+      title: "SERVER FEATURES",
       bg: BGChar2,
       char: CharPNG3,
       items: [
-        { icon: IconLoot, text: "Autoloot & Autotarget feature / Quest navigation", video: null },
+        { icon: IconDungeon, text: "Battle Dungeon", video: null },
         { icon: IconPrem, text: "Free 2 days premium", video: null },
-        { icon: IconLoot, text: "Big prizes on events", video: null },
+        { icon: IconNotice, text: "Pitboss Notification", video: null },
+        { icon: IconLoot, text: "Universal UTS", video: null },
+        { icon: IconKill, text: "Kill Notification", video: null },
       ],
     },
   ];
 
   const streamers = [
   { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2,  link: "/guild1" },
-  { image: Erina, hoverImage: ErinaHovered, logo: GuildLogo2, link: "/guild2" },
-  { image: Fallen, hoverImage: FallenHovered, logo: GuildLogo2, link: "/guild3" },
-  { image: Tyke, hoverImage: TykeHovered, logo: GuildLogo2,  link: "/guild1" },
-  { image: Kazumi, hoverImage: KazumiHovered, logo: GuildLogo2,  link: "/guild1" },
-  { image: Yendere, hoverImage: YendereHovered, logo: GuildLogo2,  link: "/guild1" },
-  { image: Emmachii, hoverImage: EmmachiiHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2, link: "/guild2" },
+  { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2, link: "/guild3" },
+  { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2,  link: "/guild1" },
+  { image: ProfB, hoverImage: ProfBHovered, logo: GuildLogo2,  link: "/guild1" },
   // Add more guilds as necessary
 ];
 
@@ -288,7 +282,7 @@ function Home() {
       <h1 
        style={{ textShadow: '10px 10px 10px rgba(0,0,0,0.8)' }}
       className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 font-StrongSword font-medium mb-4">
-        Uncover the Novus's Ancients
+        Uncover the Legends of Novus
       </h1>
       <p
        style={{ textShadow: '10px 10px 10px rgba(0,0,0,0.8)' }} 
@@ -394,43 +388,52 @@ function Home() {
   </div>
   </div>
 
-  {/* Partnered Streamers Section */}
-  <div className="w-full bg-black text-white py-16 px-6 border-2 border-yellow-500">
-    <motion.h2
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.2 }}
-      className="text-4xl sm:text-5xl md:text-6xl font-medium font-StrongSword text-yellow-300 text-center"
-    >
-      PARTNERED STREAMERS
-    </motion.h2>
+ {/* Partnered Streamers Section */}
+<div className="w-full h-full bg-BGStreamers bg-no-repeat bg-cover text-white py-16 px-6 border-2 border-yellow-500 relative">
+  {/* Dark overlay */}
+  <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 
-    <div className="flex flex-wrap justify-center gap-10 mt-16 relative">
-      {streamers.map((streamers, index) => (
-        <motion.div
-          key={index}
-          whileHover={{ opacity: 1 }}
-          className="flex flex-col items-center text-center relative group cursor-pointer"
-          onClick={() => window.open(streamers.link, "_blank")}
-        >
-          <img
-            src={streamers.image}
-            className="w-56 h-[500px] object-cover border-x border-yellow-500 mb-4 transition-all duration-300 group-hover:opacity-0"
-          />
+  <motion.h2
+    initial={{ opacity: 0, y: -50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, delay: 0.2 }}
+    className="text-4xl sm:text-5xl md:text-6xl font-medium font-StrongSword text-yellow-300 text-center relative z-10"
+  >
+    PARTNERED STREAMERS
+  </motion.h2>
 
-          <img
-            src={streamers.hoverImage}
-            className="w-60 h-[500px] object-cover absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-          />
+  <div className="flex flex-wrap justify-center gap-10 mt-16 relative z-10">
+    {streamers.map((streamer, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ opacity: 1 }}
+ className="flex flex-col items-center text-center relative group cursor-pointer transform transition duration-300 ease-in-out
+           group-hover:grayscale hover:!grayscale-0
+           hover:scale-105 hover:shadow-[0_0_50px_10px_#fbbf24]"
 
-          <img
-            src={streamers.logo}
-            className="absolute bottom-0 w-32 h-32"
-          />
-        </motion.div>
-      ))}
-    </div>
+        onClick={() => window.open(streamer.link, "_blank")}
+      >
+        <img
+          src={streamer.image}
+          className="w-56 h-[500px] object-cover  mb-4 transition-all duration-300 group-hover:opacity-0"
+        />
+
+        <img
+          src={streamer.hoverImage}
+          className="w-60 h-[500px] object-cover absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+        />
+
+        <img
+          src={streamer.logo}
+          className="absolute bottom-0 w-32 h-32"
+        />
+      </motion.div>
+    ))}
   </div>
+</div>
+
+
+
   <Footer/>
 </>
 
