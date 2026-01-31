@@ -11,7 +11,7 @@ export default {
       backgroundImage: {
         'BGHome': "url('/public/BGHome.jpg')",
         'BGCombination': "url('/public/BGCombination.jpg')",
-        'BGGuilds': "url('/src/assets/BGGuilds.jpg')",
+        'BGGuilds': "url('/src/assets/BGGuilds.png')",
         'BGLong': "url('/public/BGLong.png')",
         'BGStreamers': "url('/public/BGStreamers.jpg')",
       },
