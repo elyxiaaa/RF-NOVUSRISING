@@ -313,7 +313,6 @@ function Home() {
           muted
           playsInline
           className="w-full sm:w-[70%] md:w-[50%] max-w-lg rounded-md shadow-lg "
-          style={{ animationDelay: '0s' }}
         >
           Your browser does not support the video tag.
         </video>
@@ -322,15 +321,19 @@ function Home() {
 
     {/* Background Image with Text */}
 
-      <div className="relative w-full sm:w-[60%] mx-auto h-[350px] overflow-hidden rounded-lg">
-        <div className="absolute left-0 right-0 top-1/2 transform -translate-y-1/2 flex justify-center">
+      <div className="relative w-full sm:w-[60%] mx-auto h-[350px] overflow-hidden rounded-lg border border-yellow-500"
+      style={{
+      boxShadow: '0 10px 40px rgba(253, 224, 71, 1)', 
+    }}>
+        <div className="absolute left-0 right-0 top-1/2  transform -translate-y-1/2 flex justify-center"
+        >
           <video
             src={Video2}
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover max-w-none pointer-events-none"
+            className="w-full h-full object-cover max-w-none pointer-events-none "
           />
         </div>
       </div>
@@ -350,7 +353,7 @@ function Home() {
  
 
   {/* Guilds Section */}
-  <div className="relative w-full min-h-screen bg-black bg-cover bg-no-repeat bg-center mb-0"> {/* Fixed this issue */}
+  <div className="relative w-full min-h-screen bg-BGStreamers bg-cover bg-no-repeat bg-center mb-0"> {/* Fixed this issue */}
     <div className="absolute inset-0 bg-black bg-opacity-65 z-0"></div>
 
     <div className="w-full text-white py-16 px-6 z-10 relative">
